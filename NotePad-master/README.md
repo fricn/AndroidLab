@@ -376,7 +376,7 @@ public class MyApplication extends Application {
 ### 3、美化设计
 * 效果演示
 
-![图片](https://user-images.githubusercontent.com/90902968/143775232-612176c2-f128-444a-ba4b-6156403751c1.png)
+![图片](https://user-images.githubusercontent.com/90902968/143775691-f373765f-47a6-4798-bdc4-0a0c05410c42.png)
 
 * 代码演示
 ```
