@@ -1,2 +1,5 @@
-# NotePad
-This is an AndroidStudio rebuild of google SDK sample NotePad
+# NotePad期中作业
+## 软件工程一班
+## 一、基本功能
+### 1、时间戳
+### 2、
