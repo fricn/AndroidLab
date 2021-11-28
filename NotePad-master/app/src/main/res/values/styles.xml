@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme">
+        <item name="android:background">@drawable/bac_pic</item>
+    </style>
+    <style name="bar">
+        <item name="android:colorBackground">@color/barColor</item>
+    </style>
+    <style name="theme_bac">
+        <item name="android:radius">50dp</item>
+    </style>
+</resources>
