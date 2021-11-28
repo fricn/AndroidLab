@@ -9,6 +9,7 @@
 * 代码演示
 ```
 <!--布局文件-->
+
 <TextView
     android:id="@android:id/text2"
     android:layout_width="match_parent"
@@ -20,6 +21,7 @@
 ```
 ```
 //添加“COLUMN_NAME_MODIFICATION_DATE”
+
 private static final String[] PROJECTION = new String[] {
         NotePad.Notes._ID, // 0
         NotePad.Notes.COLUMN_NAME_TITLE, // 1
@@ -28,12 +30,14 @@ private static final String[] PROJECTION = new String[] {
 ```
 ```
 //添加适配器内容
+
 String[] dataColumns = { NotePad.Notes.COLUMN_NAME_TITLE,
         NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE} ;
 int[] viewIDs = { android.R.id.text1, android.R.id.text2 };
 ```
 ```
 //获取系统的时间，并进行格式化
+
 ContentValues values = new ContentValues();
 SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd- HH:mm");
 simpleDateFormat.setTimeZone(TimeZone.getTimeZone("GMT+8"));
@@ -51,6 +55,7 @@ values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, sdFormat);
 * 代码演示
 ```
 <!--搜索界面布局文件-->
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -72,6 +77,7 @@ values.put(NotePad.Notes.COLUMN_NAME_MODIFICATION_DATE, sdFormat);
 ```
 ```
 //在NoteList中添加搜索界面跳转
+
 case R.id.menu_search_item:
     Intent intent = new Intent(this, NoteSearch.class);
     this.startActivity(intent);
@@ -79,6 +85,7 @@ case R.id.menu_search_item:
 ```
 ```
 //搜索功能实现界面，NoteSearch
+
 package com.example.android.notepad;
 import android.app.Activity;
 import android.content.Intent;
@@ -167,6 +174,7 @@ public class NoteSearch extends Activity implements SearchView.OnQueryTextListen
 
 ```
 <!--Setting布局界面代码演示-->
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -229,6 +237,7 @@ public class NoteSearch extends Activity implements SearchView.OnQueryTextListen
 ```
 ```
 //在NoteList中设置跳转
+
 case R.id.menu_setting:
     Intent intent1 = new Intent(this, NoteSetting.class);
     this.startActivity(intent1);
@@ -255,6 +264,7 @@ case R.id.menu_setting:
 * 代码演示
 ```
 <!--背景颜色布局界面-->
+
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
@@ -275,6 +285,7 @@ case R.id.menu_setting:
 ```
 ```
 //在NoteEditor中添加背景色的选择框，以及选择结果设置
+
 //背景颜色的选择框
     private  void showpopSelectBgWindows(){
         LayoutInflater inflater = LayoutInflater.from(this);
@@ -370,6 +381,7 @@ public class MyApplication extends Application {
 * 代码演示
 ```
 <!--笔记列表美化布局界面-->
+
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
@@ -405,6 +417,7 @@ public class MyApplication extends Application {
 ```
 ```
 //在NoteList的onCreat()中设置背景图片
+
 //添加背景图片
 Resources res = getResources();
 Drawable drawable = res.getDrawable(R.drawable.bac_pic);
